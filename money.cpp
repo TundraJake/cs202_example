@@ -25,23 +25,28 @@ Money::~Money(){
 	cout << "You burned your wallet..." << endl;
 }
 
-float Money::getDollar(){
+int Money::getDollar(){
 	return _dollar;
 }
 
-float Money::getChange(){
+int Money::getChange(){
 	return _change;
 }
 
-void Money::setDollar(float dollar){
+string Money::getBalance(){
+	return _balance.str();
+}
+
+void Money::setDollar(int dollar){
 	_dollar = dollar;
 }
 
-void Money::setChange(float change){
+void Money::setChange(int change){
 	_change = change;
 }
 
 void Money::setBalance(){
+	_balance.str("");
 	_balance.clear();
 	formatBalance(); 
 }
@@ -58,6 +63,7 @@ void Money::setNewBalance(){
 	setDollar(input);
 	
 	moneyValidator();	
+	setBalance();
 }
 
 void Money::formatBalance(){

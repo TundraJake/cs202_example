@@ -10,11 +10,13 @@ Review:
 
 #include <iostream>
 #include <sstream>
+#include <string>
 using std::cout;
 using std::endl;
 using std::ostringstream;
 using std::ostream;
 using std::cin;
+using std::string;
 
 class Money{
 public:
@@ -23,15 +25,16 @@ public:
 	~Money();
 
 	// Accessor & Mutator functions.
-	void setDollar(float);
-	void setChange(float);
-	float getDollar();
-	float getChange();
+	void setDollar(int);
+	void setChange(int);
+	int getDollar();
+	int getChange();
 
 	// Validator
 	void moneyValidator();
 
 	// Extra Money Functions
+	string getBalance();
 	void printBalance();
 	void formatBalance();
 	void setNewBalance();
@@ -41,8 +44,8 @@ public:
 private:
 	void setBalance();
 
-	float _dollar;
-	float _change;
+	int _dollar;
+	int _change;
 	ostringstream _balance;
 
 };
