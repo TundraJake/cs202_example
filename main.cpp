@@ -15,6 +15,5 @@ TEST_CASE("Money Testing -- Simple Init"){
 	REQUIRE(a.getDollar() == 5);
 	REQUIRE(a.getChange() == 5);
 	REQUIRE(a.getBalance() == "$5.05");
-	cout <<"wtf" << endl;
 
 }
