@@ -8,12 +8,14 @@ Review:
 #include "money.hpp"
 
 Money::Money(int dollar, int change): _dollar(dollar), _change(change) {
-	changeValidator();
+	moneyValidator();
 	cout << "Your new wallet" << endl;
 	printBalance();
 }
 
-void Money::changeValidator(){
+void Money::moneyValidator(){
+	if (_dollar < 0)
+		_dollar = 0;
 	if (_change < 0)
 		_change = 0;
 }

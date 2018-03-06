@@ -11,8 +11,14 @@ using std::cout;
 using std::endl;
 
 int main(){
+	// Test Suite
+	{
+		Money a(534,54);
+		Money b(100,-1);
+		Money c(-1,-1);
 
-	Money a(534,54);
+	}
+
 
 	return 0;
 }
