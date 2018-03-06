@@ -12,7 +12,7 @@ using std::endl;
 
 int main(){
 
-	Money a(5,5);
+	Money a(534,54);
 
 	return 0;
 }

@@ -6,7 +6,14 @@ Review:
 */
 
 #ifndef MONEY_H
-#define MONEY_H 
+#define MONEY_H
+
+#include <iostream>
+#include <sstream>
+using std::cout;
+using std::endl;
+using std::ostringstream;
+using std::ostream;
 
 class Money{
 public:
@@ -15,6 +22,8 @@ public:
 	void printBalance();
 	float getDollar();
 	float getChange();
+
+	void formatBalance(ostream &);
 
 	// Money operator+(const Money &);
 

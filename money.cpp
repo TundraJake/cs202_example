@@ -6,10 +6,6 @@ Review:
 */
 
 #include "money.hpp"
-#include <iostream>
-using std::cout;
-using std::endl;
-
 
 Money::Money(int dollar, int change): _dollar(dollar), _change(change) {
 	cout << "Your new wallet" << endl;
@@ -28,7 +24,17 @@ float Money::getChange(){
 	return _change;
 }
 
-void Money::printBalance(){
-	cout << "$" << getDollar() << "." << getChange() << endl;
+void Money::formatBalance(ostream & os){
+	os << "$" << getDollar();
+	if (getChange() < 10)
+		os << ".0" << getChange();
+	else
+		os << "." << getChange();
+}
+
+void Money::printBalance(){ 
+	std::ostringstream os;
+	formatBalance(os);
+	cout << os.str() << endl;
 }
 
