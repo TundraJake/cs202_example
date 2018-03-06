@@ -39,10 +39,12 @@ string Money::getBalance(){
 
 void Money::setDollar(int dollar){
 	_dollar = dollar;
+	setBalance();
 }
 
 void Money::setChange(int change){
 	_change = change;
+	setBalance();
 }
 
 void Money::setBalance(){
@@ -60,7 +62,7 @@ void Money::setNewBalance(){
 
 	cout << "Enter new change amount..." << endl;
 	cin >> input;
-	setDollar(input);
+	setChange(input);
 	
 	moneyValidator();	
 	setBalance();
