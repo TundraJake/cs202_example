@@ -21,9 +21,13 @@ using std::string;
 class Money{
 public:
 	// Constructors and destructor.
-	Money(int, int);
 	Money();
-	// ~Money();
+	Money(int, int);
+
+	// Big Three
+	~Money();
+	Money(Money &);
+	Money &operator=(const Money &);
 
 	// Accessor & Mutator functions.
 	void setDollar(int);

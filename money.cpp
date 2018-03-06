@@ -17,16 +17,39 @@ Money::Money(int dollar, int change): _dollar(dollar), _change(change) {
 	printBalance();
 }
 
+Money::Money(Money & money){
+	_dollar = money._dollar;
+	_change = money._change;
+	this->setBalance();
+}
+
+Money &Money::operator=(const Money & rhs){
+
+	if (this != &rhs){
+
+		_dollar = rhs._dollar;
+		_change = rhs._change;
+		setBalance();
+	}
+	return *this;
+}
+
+
+
+Money::~Money(){
+	cout << "You burned your wallet..." << endl;
+}
+
+
+
+
+
 void Money::moneyValidator(){
 	if (_dollar < 0)
 		_dollar = 0;
 	if (_change < 0 || _change >= 100)
 		_change = 0;
 }
-
-// Money::~Money(){
-// 	cout << "You burned your wallet..." << endl;
-// }
 
 int Money::getDollar(){
 	return _dollar;
@@ -93,4 +116,8 @@ Money Money::operator+(const Money & rhs){
 	money.setBalance();
 	return money;
 }
+
+
+
+
 
