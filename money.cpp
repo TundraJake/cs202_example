@@ -7,6 +7,9 @@ Review:
 
 #include "money.hpp"
 
+Money::Money():_dollar(0), _change(0){}
+
+
 Money::Money(int dollar, int change): _dollar(dollar), _change(change) {
 	moneyValidator();
 	setBalance();
@@ -21,9 +24,9 @@ void Money::moneyValidator(){
 		_change = 0;
 }
 
-Money::~Money(){
-	cout << "You burned your wallet..." << endl;
-}
+// Money::~Money(){
+// 	cout << "You burned your wallet..." << endl;
+// }
 
 int Money::getDollar(){
 	return _dollar;
@@ -78,5 +81,16 @@ void Money::formatBalance(){
 
 void Money::printBalance(){ 
 	cout << _balance.str() << endl;
+}
+
+
+// Operator overloading
+
+Money Money::operator+(const Money & rhs){
+	Money money;
+	money._dollar = this->_dollar + rhs._dollar;
+	money._change = this->_change + rhs._change;
+	money.setBalance();
+	return money;
 }
 

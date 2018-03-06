@@ -20,9 +20,10 @@ using std::string;
 
 class Money{
 public:
-	// Constructor and destructor.
+	// Constructors and destructor.
 	Money(int, int);
-	~Money();
+	Money();
+	// ~Money();
 
 	// Accessor & Mutator functions.
 	void setDollar(int);
@@ -38,6 +39,8 @@ public:
 	void printBalance();
 	void formatBalance();
 	void setNewBalance();
+
+	Money operator+(const Money &);
 
 	// Money operator+(const Money &);
 

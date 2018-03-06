@@ -29,3 +29,16 @@ TEST_CASE("Money Testing -- Alter Data"){
 	REQUIRE(a.getBalance() == "$3.10");
 
 }
+
+TEST_CASE("Operator Overloading -- Simple Test"){
+
+	Money a(5,5);
+	Money b(5,5);
+	Money c;
+
+	c = a + b;
+	REQUIRE(c.getDollar() == 10);
+	REQUIRE(c.getChange() == 10);
+	REQUIRE(c.getBalance() == "$10.10");
+
+}
