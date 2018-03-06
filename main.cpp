@@ -8,6 +8,7 @@ Review:
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "money.cpp"
+#include "money2.cpp"
 
 void printLine(){
 	cout << "\n==================\n" << endl;
@@ -52,3 +53,15 @@ TEST_CASE("Operator Overloading -- Simple Test"){
 	}
 	printLine();
 }
+
+TEST_CASE("Silently written function"){
+
+	Money2 a;
+
+}
+
+
+
+
+
+
