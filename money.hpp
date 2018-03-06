@@ -53,6 +53,8 @@ private:
 
 	int _dollar;
 	int _change;
+
+	int * _arr;
 	ostringstream _balance;
 
 };

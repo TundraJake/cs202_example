@@ -7,10 +7,13 @@ Review:
 
 #include "money.hpp"
 
-Money::Money():_dollar(0), _change(0){}
+Money::Money():_dollar(0), _change(0){
+	_arr = new int[10];
+}
 
 
 Money::Money(int dollar, int change): _dollar(dollar), _change(change) {
+	_arr = new int[10];
 	moneyValidator();
 	setBalance();
 	cout << "Your new wallet" << endl;
@@ -36,6 +39,7 @@ Money &Money::operator=(const Money & rhs){
 
 Money::~Money(){
 	cout << "You burned your wallet..." << endl;
+	delete[] _arr;
 }
 
 void Money::moneyValidator(){
