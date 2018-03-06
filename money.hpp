@@ -23,6 +23,7 @@ public:
 	float getDollar();
 	float getChange();
 
+	void changeValidator();
 	void formatBalance(ostream &);
 
 	// Money operator+(const Money &);
