@@ -33,6 +33,14 @@ float Money::getChange(){
 	return _change;
 }
 
+void Money::setDollar(float dollar){
+	_dollar = dollar;
+}
+
+void Money::setChange(float change){
+	_change = change;
+}
+
 void Money::setBalance(){
 	_balance.clear();
 	formatBalance(); 

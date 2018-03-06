@@ -22,13 +22,16 @@ public:
 	~Money();
 
 	// Accessor & Mutator functions.
-	void setDollar();
-	void setChange();
+	void setDollar(float);
+	void setChange(float);
 	float getDollar();
 	float getChange();
 
-	void printBalance();
+	// Validator
 	void moneyValidator();
+
+	// Extra Money Functions
+	void printBalance();
 	void formatBalance();
 
 
@@ -36,6 +39,7 @@ public:
 
 private:
 	void setBalance();
+
 	float _dollar;
 	float _change;
 	ostringstream _balance;
