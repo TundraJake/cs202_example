@@ -22,6 +22,8 @@ int main(){
 	
 	{
 		Money a(100,100);
+
+		a.setNewBalance();
 	}
 
 	return 0;
