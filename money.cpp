@@ -34,15 +34,9 @@ Money &Money::operator=(const Money & rhs){
 	return *this;
 }
 
-
-
 Money::~Money(){
 	cout << "You burned your wallet..." << endl;
 }
-
-
-
-
 
 void Money::moneyValidator(){
 	if (_dollar < 0)
@@ -73,11 +67,6 @@ void Money::setChange(int change){
 	setBalance();
 }
 
-void Money::setBalance(){
-	_balance.str("");
-	_balance.clear();
-	formatBalance(); 
-}
 
 void Money::setNewBalance(){
 
@@ -92,6 +81,12 @@ void Money::setNewBalance(){
 	
 	moneyValidator();	
 	setBalance();
+}
+
+void Money::setBalance(){
+	_balance.str("");
+	_balance.clear();
+	formatBalance(); 
 }
 
 void Money::formatBalance(){

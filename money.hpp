@@ -44,9 +44,11 @@ public:
 	void formatBalance();
 	void setNewBalance();
 
+	// Operator Overloading
 	Money operator+(const Money &);
 
 private:
+	// Why private? 
 	void setBalance();
 
 	int _dollar;
