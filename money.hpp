@@ -46,8 +46,6 @@ public:
 
 	Money operator+(const Money &);
 
-	// Money operator+(const Money &);
-
 private:
 	void setBalance();
 
