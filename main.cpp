@@ -16,10 +16,16 @@ TEST_CASE("Money Testing -- Simple Init"){
 	REQUIRE(a.getChange() == 5);
 	REQUIRE(a.getBalance() == "$5.05");
 
-	cout << "Enter values 3 and 10" << endl;
+}
+
+TEST_CASE("Money Testing -- Alter Data"){
+
+	Money a(5,5);
+	cout << "Enter values 3 and 10 to pass following tests..." << endl;
 	a.setNewBalance();
 
 	REQUIRE(a.getDollar() == 3);
 	REQUIRE(a.getChange() == 10);
 	REQUIRE(a.getBalance() == "$3.10");
+
 }
