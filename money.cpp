@@ -9,6 +9,7 @@ Review:
 
 Money::Money(int dollar, int change): _dollar(dollar), _change(change) {
 	moneyValidator();
+	setBalance();
 	cout << "Your new wallet" << endl;
 	printBalance();
 }
@@ -32,17 +33,20 @@ float Money::getChange(){
 	return _change;
 }
 
-void Money::formatBalance(ostream & os){
-	os << "$" << getDollar();
+void Money::setBalance(){
+	_balance.clear();
+	formatBalance(); 
+}
+
+void Money::formatBalance(){
+	_balance << "$" << getDollar();
 	if (getChange() < 10)
-		os << ".0" << getChange();
+		_balance << ".0" << getChange();
 	else
-		os << "." << getChange();
+		_balance << "." << getChange();
 }
 
 void Money::printBalance(){ 
-	std::ostringstream os;
-	formatBalance(os);
-	cout << os.str() << endl;
+	cout << _balance.str() << endl;
 }
 

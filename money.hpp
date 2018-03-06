@@ -17,21 +17,28 @@ using std::ostream;
 
 class Money{
 public:
+	// Constructor and destructor.
 	Money(int, int);
 	~Money();
-	void printBalance();
+
+	// Accessor & Mutator functions.
+	void setDollar();
+	void setChange();
 	float getDollar();
 	float getChange();
 
+	void printBalance();
 	void moneyValidator();
-	void formatBalance(ostream &);
+	void formatBalance();
+
 
 	// Money operator+(const Money &);
 
 private:
+	void setBalance();
 	float _dollar;
 	float _change;
-	ostreamstring _balance;
+	ostringstream _balance;
 
 };
 
