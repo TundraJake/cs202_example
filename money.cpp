@@ -17,7 +17,7 @@ Money::Money(int dollar, int change): _dollar(dollar), _change(change) {
 }
 
 Money::~Money(){
-	cout << "You dropped your wallet..." << endl;
+	cout << "You burned your wallet..." << endl;
 }
 
 float Money::getDollar(){
