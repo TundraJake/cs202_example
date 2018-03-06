@@ -14,6 +14,7 @@ using std::cout;
 using std::endl;
 using std::ostringstream;
 using std::ostream;
+using std::cin;
 
 class Money{
 public:
@@ -33,7 +34,7 @@ public:
 	// Extra Money Functions
 	void printBalance();
 	void formatBalance();
-
+	void setNewBalance();
 
 	// Money operator+(const Money &);
 

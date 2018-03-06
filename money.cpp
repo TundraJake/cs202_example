@@ -17,7 +17,7 @@ Money::Money(int dollar, int change): _dollar(dollar), _change(change) {
 void Money::moneyValidator(){
 	if (_dollar < 0)
 		_dollar = 0;
-	if (_change < 0)
+	if (_change < 0 || _change >= 100)
 		_change = 0;
 }
 
@@ -44,6 +44,20 @@ void Money::setChange(float change){
 void Money::setBalance(){
 	_balance.clear();
 	formatBalance(); 
+}
+
+void Money::setNewBalance(){
+
+	float input;
+	cout << "Enter new dollar amount..." << endl;
+	cin >> input;
+	setDollar(input);
+
+	cout << "Enter new change amount..." << endl;
+	cin >> input;
+	setDollar(input);
+	
+	moneyValidator();	
 }
 
 void Money::formatBalance(){
